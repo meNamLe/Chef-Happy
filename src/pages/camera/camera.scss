@@ -1,11 +1,139 @@
-page-home {
+page-camera {
 
 }
-  
-  .friesContainer {
+
+/////////////////////////////////////////////////
+//////////////////camera ticks///////////////////
+/////////////////////////////////////////////////
+.l-long-bar {
     position: absolute;
-    top: 40%;
+    left:0;
+    height: 100%;
+    width: 5%;
+    border: 1px white solid;
+    background: white;
+}
+.l-short-top-bar {
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 5%;
+    width: 15%;
+    margin-top: 0;
+    border: 1px white solid;
+    background: white;
+}
+.l-short-bottom-bar {
+    position: absolute;
+    left:0;
+    bottom: 0;
+    height: 5%;
+    width: 15%;
+    margin-bottom: 0;
+    border: 1px white solid;
+    background: white;
+}
+.r-long-bar {
+    position: absolute;
+    right:0;
+    height: 100%;
+    width: 5%;
+    border: 1px white solid;
+    background: white;
+}
+.r-short-top-bar {
+    position: absolute;
+    right:0;
+    top: 0;
+    height: 5%;
+    width: 15%;
+    margin-top: 0;
+    border: 1px white solid;
+    background: white;
+}
+.r-short-bottom-bar {
+    position: absolute;
+    right:0;
+    bottom: 0;
+    height: 5%;
+    width: 15%;
+    margin-bottom: 0;
+    border: 1px white solid;
+    background: white;
+}
+
+.leftEnter {animation: left-tick-enter 2s forwards}
+
+.leftLeave {animation: left-tick-leave 2s forwards}
+
+.rightEnter {animation: right-tick-enter 2s forwards}
+
+.rightLeave {animation: right-tick-leave 2s forwards}
+
+@keyframes left-tick-enter {
+    0% {
+        top: 40%;
+        height: 10%;
+        width: 10%;
+        left: 40%;
+    }
+    100% {
+        top: 10%;
+        height: 80%;
+        width: 100%;
+        left: 5%;
+    }
+}
+@keyframes left-tick-leave {
+    0% {
+        top: 10%;
+        height: 80%;
+        width: 100%;
+        left: 5%;
+    }
+    100% {
+        top: 40%;
+        height: 10%;
+        width: 10%;
+        left: 40%;
+    }
+}
+@keyframes right-tick-enter {
+    0% {
+        top: 40%;
+        height: 10%;
+        width: 10%;
+        right: 40%;  
+    }
+    100% {
+        top: 10%;
+        height: 80%;
+        width: 100%;
+        right: 5%;     
+    }
+}
+@keyframes right-tick-leave {
+    0% {
+        top: 10%;
+        height: 80%;
+        width: 100%;
+        right: 5%; 
+    }
+    100% {
+        top: 40%;
+        height: 10%;
+        width: 10%;
+        right: 40%;      
+    }
+}
+
+
+
+.friesContain {
+    position: absolute;
     left: 50%;
+    z-index: -1;
+    top: 60%;
     margin-left: -75px;
   }
   
@@ -19,7 +147,6 @@ page-home {
       &:before {
         position: absolute;
         content: '';
-        top: -10rem;
         width: inherit;
         height: inherit;
         border-radius: 100%;
@@ -175,235 +302,51 @@ page-home {
     }
   }
 
-@keyframes fries1 {
-    0% {
-        left: 1rem;
-        top: 0rem;
-    }
-    100% {
-        left: -3.1rem;
-        top: -31rem
-    }
-}
-@keyframes fries2 {
-    0% {
-        top: 1rem;
-        left: 2.5rem;
-    }
-    100% {
-        top: -31rem;
-        left: 2.5rem;
-    }
-} 
-@keyframes fries3 {
-    0% {
-        top: 2rem;
-        left: 5rem;
-    }
-    100% {
-        top: -31rem;
-        left: 5rem;
-    }
-}  
-@keyframes fries4 {
-    0% {
-        top: 1rem;
-        left: 7.5rem;
-    }
-    100% {
-        top: -30rem;
-        left: 8.5rem;
-    }
-}  
-@keyframes fries5 {
-    0% {
-        left: 11.9rem;
-        top: 0rem
-    }
-    100% {
-        left: 14.9rem;
-        top: -24rem;
-    }
-}  
-@keyframes fries6 {
-    0% {
-        top: -1.5rem;
-        left: 1rem;
-    }
-    100% {
-        top: -22rem;
-        left: -4rem;
-    }
-}  
-@keyframes fries7 {
-    0% {
-        top: -1rem;
-        left: 2rem;
-    }
-    100% {
-        top: -23rem;
-        left: 2rem;
-    }
-}  
-@keyframes fries8 {
-    0% {
-        top: -0.5rem;
-        left: 3.5rem;
-    }
-    100% {
-        top: -20rem;
-        left: 3.5rem;
-    }
-}
-@keyframes fries9 {
-    0% {
-        top: -1rem;
-        left: 6.5rem;
-    }
-    100% {
-        top: -25rem;
-        left: 6.5rem;
-    }
-}
-@keyframes fries10 {
-    0% {
-        top: -1rem;
-        left: 9rem;
-    }
-    100% {
-        top: -15rem;
-        left: 9rem;
-    }
-}
-@keyframes fries11 {
-    0% {
-        top: -0.5rem;
-        left: 10rem;
-    }
-    100% {
-        top: -20rem;
-        left: 13rem;
-    }
-}
-@keyframes fries12 {
-    0% {
-        top: -1.5rem;
-        left: 11rem;
-    }
-    100% {
-        top: -29rem;
-        left: 13rem;
-    }
-}
-@keyframes fries13 {
-    0% {
-        top: -2.5rem;
-        left: 8rem;    
-    }
-    100% {
-        top: -23rem;
-        left: 8rem;
-    }
-}
-@keyframes fries14 {
-    0% {
-        top: -2.5rem;
-        left: 5rem;
-    }
-    100% {
-        top: -18rem;
-        left: 0rem;    
-    }
-}
-@keyframes friesBounce {
+
+@keyframes friesEnter {
     0%{
-        top: 50%;
+        top: 10%;
     }
-    50%{
-        top: 55%;
-    }
-    90%{
-        top: 50%;
+    100%{
+        top: 60%;
     }
 }
 
-.fries1 {
-    animation: fries1;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries2 {
-    animation: fries2;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries3 {
-    animation: fries3;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries4 {
-    animation: fries4;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries5 {
-    animation: fries5;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries6 {
-    animation: fries6;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries7 {
-    animation: fries7;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries8 {
-    animation: fries8;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries9 {
-    animation: fries9;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries10 {
-    animation: fries10;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries11 {
-    animation: fries11;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries12 {
-    animation: fries12;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries13 {
-    animation: fries13;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
-}.fries14 {
-    animation: fries14;
-    animation-direction: forwards;
-    animation-duration: 1.35s;    
-    animation-delay: .65s;
+.fry1 {
+    opacity: 0;
+}.fry2 {
+    opacity: 0;
+}.fry3 {
+    opacity: 0;
+}.fry4 {
+    opacity: 0;
+   
+}.fry5 {
+    opacity: 0;
+   
+}.fry6 {
+    opacity: 0;   
+}.fry7 {
+    opacity: 0; 
+}.fry8 {
+    opacity: 0;
+}.fry9 {
+    opacity: 0; 
+}.fry10 {
+    opacity: 0;  
+}.fry11 {
+    opacity: 0; 
+}.fry12 {
+    opacity: 0;  
+}.fry13 {
+    opacity: 0;
+}.fry14 {
+    opacity: 0;    
 }
-
-.friesBounce { 
-    animation: friesBounce ease-in;
-    animation-timing-function: ease-in-out;
+.friesEnter { 
+    animation: friesEnter;
     animation-direction: forwards;
-    animation-duration: .65s;
+    animation-delay: 1s;
 }
 
 
@@ -457,25 +400,6 @@ page-home {
     top: 20%;
 }
 
-.freckles {
-    background-color: #fff;
-    border-radius: 50%;
-    height: 10px;
-    position: absolute;
-    top: 100px;
-    width: 10px;
-
-    &:before, &:after {
-        background-color: inherit;
-        border-radius: inherit;
-        content:'';
-        height: inherit;
-        position: absolute;
-        width: inherit;
-    }
-}
-
-
 .mouth {
     background-color: black;
     border-radius: 0 0 200px 200px;
@@ -520,9 +444,71 @@ h1 {
   }
   
 
-  //////////////////////////////////////
-  ////////////////Logo img////////////////
-  //////////////////////////////////////
+
+
+
+  /////////////////////////////////////////////////
+  /////////////////Food Tag Clarifa////////////////
+  /////////////////////////////////////////////////
+  .foodTags{
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(to right, black , gray);
+    position: absolute;
+    top: 80%;
+    p {
+        font-size: 25px;
+        color: white;
+        position: absolute;
+        animation: foodTagsPara 1.5s 10;
+    }
+  }
+
+  .foodTagsEnter {
+    animation: foodTags 1s forwards;
+  }
+
+  .foodTagsExit {
+    animation: foodTags 1s reverse;
+  }
+
+@keyframes foodTagsPara {
+    0% {
+        opacity: 0;
+        left: -80px;
+    }
+    100% {
+        opacity: 1;
+        left: 35%;
+    }
+}
+@keyframes foodTags {
+    0% {
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/////////////////////////////////////////////////
+/////////////////Circle Picture////////////////
+/////////////////////////////////////////////////
+
+.circle {
+    height: 80px;
+    width: 80px;
+    border: 4px white solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-left: -40px
+}
+
+///////////////////////////////////////////
+/////////////////svg///////////////////////
+///////////////////////////////////////////
 
 .logo {
     width: 60%;
