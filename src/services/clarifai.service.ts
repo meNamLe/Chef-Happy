@@ -2,7 +2,7 @@ import * as Clarifai from 'clarifai';
 
 export class ClarifaiService {
     app = new Clarifai.App({
-        apiKey: 'c439af974e7c43288355c3b18608b9c0'
+        apiKey: '<API_KEY>'
     });
     obj = {
         foodResponse: {}, 
